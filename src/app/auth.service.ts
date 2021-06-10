@@ -6,14 +6,22 @@ import {HttpClient} from '@angular/common/http'
 })
 export class AuthService {
 
+  private loggedInStatus = false;
   constructor(private http: HttpClient) { }
+
+  setLoggedIn(value: boolean){
+    this.loggedInStatus=value;
+  }
+
+  get isLoggedIn(){
+    return this.loggedInStatus
+  }
+
   getUserDetails(username,password){
     //post these details to api server 
     return this.http.post('/api/auth', {
       username,
       password
-    }).subscribe(data => {
-      console.log(data, " is what the server sent");
     });
   }
 }
