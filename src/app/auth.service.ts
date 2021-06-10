@@ -18,10 +18,21 @@ export class AuthService {
   }
 
   getUserDetails(username,password){
-    //post these details to api server 
+    //find these details on api server 
     return this.http.post('/api/auth', {
       username,
       password
     });
+  }
+  postUserDetails(name,phoneNumber,emailId,organizationName,username,password){
+    //register the user to the server
+    return this.http.post('/api/register',{
+      name,
+      phoneNumber,
+      emailId,
+      organizationName,
+      username,
+      password
+    })
   }
 }
