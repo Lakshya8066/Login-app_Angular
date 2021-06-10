@@ -1,7 +1,31 @@
-<form (submit)="registerUser($event)">
-    <input type="text" placeholder="Username" id="name">
-    <input type="text" placeholder="Phone Number" id="phoneNumber">
-    <input type="email" placeholder="Eamil" id="emailId">
-    <input type="text" placeholder="Organization Name" id="orgName">
-    <input type="submit" value="Submit">
-</form>
+<div class="pagenav">
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            Cateina
+        </a>
+    </nav>
+</div>
+
+<div class="box">
+    <h2>Register</h2>
+    <form (submit)="registerUser($event)">
+        <div class="inputBox">
+            <input type="text" name="" required="" id="name">
+            <label>Name</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" name="" required="" id="phoneNumber">
+            <label>Phone Number</label>
+        </div>
+        <div class="inputBox">
+            <input type="email" name="" required="" id="emailId">
+            <label>Email Id</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="" required="" id="orgName">
+            <label>Organization Name</label>
+        </div>
+        <input type="submit" name="" value="Submit" id="submit">
+    </form>
+</div>
