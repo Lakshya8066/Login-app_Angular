@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     this.Auth.getUserDetails(username,password).subscribe(data => {
       if(data["success"])
       {
+        console.log("User Found!");
         this.router.navigate(['admin']);
         this.Auth.setLoggedIn(true);
       }
@@ -31,7 +32,6 @@ export class LoginComponent implements OnInit {
         window.alert(data["success"]);
       }
     });
-    console.log(username,password);
   }
 
 }

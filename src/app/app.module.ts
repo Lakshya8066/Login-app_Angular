@@ -33,12 +33,8 @@ import { RegisterComponent } from './register/register.component'
         canActivate: [AuthGuard]
       },
       {
-        path: 'register',
-        component: RegisterComponent
-      },
-      {
         path: '',
-        component: HomeComponent
+        component: RegisterComponent
       }
     ])
   ],
